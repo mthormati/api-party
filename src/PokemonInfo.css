@@ -1,0 +1,30 @@
+#pokedex {
+  position: absolute;
+  margin-bottom: 1rem;
+  transform: translateX(-50%) !important;
+  left: 50%;
+  z-index: 0;
+}
+
+#pokemon-sprite {
+  transform: scale(2);
+  z-index: 1;
+  position: absolute;
+  margin-top: 15rem;
+  padding-right: 15rem;
+}
+
+#ht-wt {
+  z-index: 1;
+  font-size: 2em;
+  padding-left: 30rem;
+  padding-top: 13rem;
+}
+
+.bottom-margin {
+  margin-bottom: 2rem;
+}
+
+.absolute {
+  position: absolute;
+}
