@@ -12,6 +12,7 @@ class PokemonInfo extends Component {
       weight: 0,
       name: '',
       types: [], 
+      abilities: []
     }
   }
 
@@ -56,13 +57,23 @@ class PokemonInfo extends Component {
           <div>WT: <br/>{(pokemon.weight/4.5).toFixed(1)}lb</div>
         </div>
         <div id="general-info">
-          <div>Type: &nbsp; 
+          <div id="type">Type: <br/>
             {pokemon.types.map(
               (currentType, i) => {
                 if (i !== pokemon.types.length - 1)
                   return currentType.type.name + ", "
                 else 
                   return currentType.type.name
+              })
+            }
+          </div>
+          <div>Abilities: <br/>
+            {pokemon.abilities.map(
+              (currentType, i) => {
+                if (i !== pokemon.abilities.length - 1)
+                  return currentType.ability.name + ", "
+                else 
+                  return currentType.ability.name
               })
             }
           </div>

@@ -27,10 +27,13 @@
 }
 
 #general-info {
+  position: relative;
   font-size: 32px;
-  padding-top: 4rem;
-  text-align: left;
-  padding-left: 25rem;
+  padding-top: 3rem;
+}
+
+#type {
+  margin-bottom: 1rem;
 }
 
 .bottom-margin {
