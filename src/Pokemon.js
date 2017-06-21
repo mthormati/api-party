@@ -16,6 +16,11 @@ class Pokemon extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.history.push(`/pokemon/${this.state.pokeName}`);
+    this.pageScroll();
+  }
+
+  pageScroll() {
+    window.scrollBy(0,1000);
   }
 
   render() {
