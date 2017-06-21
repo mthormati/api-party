@@ -10,6 +10,8 @@ class PokemonInfo extends Component {
       },
       height: 0,
       weight: 0,
+      name: '',
+      types: [], 
     }
   }
 
@@ -32,6 +34,9 @@ class PokemonInfo extends Component {
       .then(pokemon => {
         if (pokemon.detail !== 'Not found.') 
         {
+          pokemon.name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+          // console.log(pokemon.types.map((currentType) => currentType.type.name))
+
           console.log(pokemon);
           this.setState({ pokemon });
         }
@@ -45,9 +50,22 @@ class PokemonInfo extends Component {
       <div>
         <img id="pokedex" src={pokedex} alt={pokedex}/>
         <img id="pokemon-sprite" src={pokemon.sprites["front_default"]} alt="pokemon sprite"/>
+        <div id="name">{pokemon.name}</div>
         <div id="ht-wt">
-          <div id="absolute" className="bottom-margin">HT: <br/>{(pokemon.height/3).toFixed(1)}ft</div>
-          <div id="absolute">WT: <br/>{(pokemon.weight/4.5).toFixed(1)}lb</div>
+          <div className="bottom-margin">HT: <br/>{(pokemon.height/3).toFixed(1)}ft</div>
+          <div>WT: <br/>{(pokemon.weight/4.5).toFixed(1)}lb</div>
+        </div>
+        <div id="general-info">
+          <div>Type: &nbsp; 
+            {pokemon.types.map(
+              (currentType, i) => {
+                if (i !== pokemon.types.length - 1)
+                  return currentType.type.name + ", "
+                else 
+                  return currentType.type.name
+              })
+            }
+          </div>
         </div>
       </div>
     );

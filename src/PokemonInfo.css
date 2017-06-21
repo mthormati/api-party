@@ -10,15 +10,27 @@
   transform: scale(2);
   z-index: 1;
   position: absolute;
-  margin-top: 15rem;
-  padding-right: 15rem;
+  margin-top: 16rem;
+  padding-right: 16rem;
 }
 
 #ht-wt {
-  z-index: 1;
-  font-size: 2em;
-  padding-left: 30rem;
-  padding-top: 13rem;
+  font-size: 32px;
+  padding-left: 17rem;
+  padding-top: 3.5rem;
+}
+
+#name {
+  font-size: 30px;
+  padding-left: 16rem;
+  padding-top: 7.7rem;
+}
+
+#general-info {
+  font-size: 32px;
+  padding-top: 4rem;
+  text-align: left;
+  padding-left: 25rem;
 }
 
 .bottom-margin {
